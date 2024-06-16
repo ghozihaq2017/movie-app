@@ -3,6 +3,7 @@ import tsParser from '@typescript-eslint/parser';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js';
 import reactPlugin from 'eslint-plugin-react';
+import prettierConfig from 'eslint-config-prettier';
 
 export default [
   {
@@ -27,6 +28,7 @@ export default [
     rules: {
       ...tseslint.configs.recommended.rules,
       ...pluginReactConfig.rules,
+      ...prettierConfig.rules 
     }
   }
 ];
